@@ -15,3 +15,7 @@ The header and footer are repeated in every page, so a nav change has to be made
 ## Adding members
 
 Each season on `en/members.html` (and `cs/members.html`) is an `<article class="season">`. To add a person, copy a `.person` block. To use a portrait instead of initials, put a photo in `img/members/` and replace the avatar's initials with `<img src="../img/members/name.jpg" alt="">`.
+
+## Deploying
+
+Every push to `main` deploys automatically through GitHub Actions (`.github/workflows/deploy.yml`), using the `CLOUDFLARE_API_TOKEN` repository secret. You can also run it by hand from the repo's Actions tab ("Deploy to Cloudflare" → Run workflow).
