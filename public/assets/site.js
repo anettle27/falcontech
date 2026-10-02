@@ -9,6 +9,13 @@
     });
   }
 
+  // Remember the visitor's language choice for the root redirect
+  document.querySelectorAll("[data-lang]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      try { localStorage.setItem("lang", a.getAttribute("data-lang")); } catch (e) {}
+    });
+  });
+
   var box = document.querySelector(".lightbox");
   if (!box) return;
   var img = box.querySelector("img");

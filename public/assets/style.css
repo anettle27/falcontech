@@ -62,7 +62,8 @@ p { margin: 0 0 1em; }
 .lang { display: flex; gap: 2px; margin-left: 10px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 3px; }
 .lang a, .lang span { font-size: .78rem; font-weight: 800; padding: 4px 9px; border-radius: 999px; text-decoration: none; letter-spacing: .06em; }
 .lang .active { background: #fff; color: var(--black); }
-.lang .soon { color: #8a8a8a; cursor: not-allowed; }
+.lang a { color: #e9e9e9; padding: 4px 9px; }
+.lang a:hover { background: rgba(255,255,255,.12); color: #fff; }
 .menu-btn { display: none; margin-left: auto; background: none; border: 2px solid var(--yellow); color: var(--yellow); border-radius: 8px; padding: 6px 10px; font: inherit; font-weight: 800; cursor: pointer; }
 
 @media (max-width: 920px) {

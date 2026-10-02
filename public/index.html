@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FalconTech 11041</title>
   <meta http-equiv="refresh" content="0; url=/en/">
-  <link rel="canonical" href="https://falcontech.anetavostra.com/en/">
+  <link rel="alternate" hreflang="en" href="https://falcontech.anetavostra.com/en/">
+  <link rel="alternate" hreflang="cs" href="https://falcontech.anetavostra.com/cs/">
   <link rel="icon" href="/img/favicon.png">
   <style>body{margin:0;background:#0b0b0b;color:#fbba00;font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}</style>
   <script>
-    // When the Czech version launches, send Czech browsers to /cs/ here.
-    location.replace("/en/");
+    // Saved choice first, then the browser language (Czech/Slovak -> Czech version)
+    var lang = null;
+    try { lang = localStorage.getItem("lang"); } catch (e) {}
+    if (!lang) lang = /^(cs|sk)\b/i.test(navigator.language || "") ? "cs" : "en";
+    location.replace(lang === "cs" ? "/cs/" : "/en/");
   </script>
 </head>
 <body><a href="/en/" style="color:#fbba00">FalconTech 11041 →</a></body>
